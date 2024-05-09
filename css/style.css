@@ -1,3 +1,144 @@
+:root{
+    --dark-color:#19283f;
+    --green-color:#33d1cc;
+    --grey-color:#eff7fa;
+    --orange-color:#ffc400;
+    --red-color:#dc3545;
+    --red-hover:#a52834;
+}
+
 body{
     font-family: "Roboto" , sans-serif;
+    height: 5000px;
 }
+
+.main-title p::before{
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom:-15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Start navbar */
+.navbar{
+    background-color: var(--dark-color);
+    
+}
+.navbar button {
+    color: white;
+    border-color: white;
+}
+.navbar button:focus {
+    border-color: var(--green-color);
+    box-shadow:none;
+}
+.navbar .navbar-nav li a{
+    color:white;
+    
+}
+.navbar .navbar-nav li .active,
+.navbar .navbar-nav li a:hover{
+    color:var(--green-color);
+}
+.navbar .search svg{
+    color: var(--green-color);
+    border-left: 1px solid var(--green-color) ;
+}
+
+/* End navbar */
+
+/* Start landing */
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 60px);
+}
+/* End landing */
+
+/* Start Features */
+.features .box .icons{
+    height: 150px;
+}
+.features .box .icons .number{
+    font-size: 150px;
+    color: var(--grey-color);
+    transform: translateX(-50%);
+}
+.features .box .icons .icon{
+    font-size: 50px;
+    color: var(--green-color);
+    position: relative;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+.features .box h2{
+    color: var(--orange-color);
+}
+/* End Features */
+
+/* Start Gallery */
+
+.gallery-content{
+    background-color: var(--grey-color);
+}
+.gallery-content ul .active,
+.gallery-content ul .active:focus{
+    background-color: var(--red-color);
+    color: white;
+    text-shadow: none;
+}
+.gallery-content ul li:hover {
+    color:var(--red-hover);
+}
+.gallery-content ul .active:hover{
+    background-color: var(--red-hover);
+}
+.gallery-content .gallery .box{
+    /* overflow: hidden; */
+    padding: 5px;
+    overflow: hidden;
+}
+.gallery-content .gallery .box::before{
+    content: attr(data);
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color:#33d1ccb5;
+    transition: .3s;
+    transform: translateX(calc(-100% - 10px));
+}
+.gallery-content .gallery .box:hover::before{
+    transform: translateX(0);
+}
+/* End Gallery */
+
+/* Start About Us */
+.about-content .description p{
+    transform: translateX(-50%);
+}
+/* End About Us */
+
+/* Start Team Section */
+
+
+
+/* End Team Section */
+
+
+
+
+
+
+
+
+
+
+
